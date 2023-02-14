@@ -43,6 +43,7 @@ body {
     justify-content: center;
     width: 1346px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 
@@ -67,6 +68,7 @@ h1 {
 
 .main-form {
     margin-top: 32px;
+
     &.not-active {
         pointer-events: none;
     }
@@ -323,6 +325,7 @@ input[type="range"]::-moz-range-thumb {
     &.pressed {
         background: #575757;
         pointer-events: none;
+
         span {
             opacity: 1;
         }
@@ -379,6 +382,171 @@ input[type="range"]::-moz-range-thumb {
 
     .form-block {
         width: calc(33.3333333% - 21px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1119px) {
+
+
+    .wrap {
+        width: calc(100% - 72px);
+        align-items: flex-start;
+        padding: 64px 0 156px;
+        height: auto;
+    }
+
+
+    .main-form {
+        margin-top: 44px;
+    }
+
+
+    .form-row__1 {
+        flex-direction: column;
+    }
+
+
+    .form-block {
+        width: 100%;
+    }
+
+
+    .range {
+        margin-top: 39px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+
+    .form-row__2 {
+        margin-top: 44px;
+        flex-wrap: wrap;
+    }
+
+    .input {
+        width: calc(50% - 40px);
+    }
+
+    .form-block__btn {
+        margin-top: 44px;
+        width: 50%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px) {
+
+
+    .wrap {
+        width: calc(100% - 40px);
+        padding: 44px 0 64px;
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+    }
+
+    .main-form {
+        margin-top: 32px;
+    }
+
+
+    .range-title {
+
+        font-size: 14px;
+
+    }
+
+
+    .range-row {
+        font-size: 22px;
+        ;
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .range-row input[type=text] {
+
+        font-size: 22px;
+
+    }
+
+    .range-proc .range-row span:nth-child(2) {
+        font-size: 22px;
+
+    }
+
+    .range {
+        margin-top: 25px;
+    }
+
+
+    .range-row {
+
+        margin-top: 8px;
+    }
+
+    .form-row__2 {
+        margin-top: 25px;
+
+    }
+
+
+
+    .input {
+        width: 100%;
+
+        &:nth-child(2) {
+            margin-top: 29px;
+        }
+    }
+
+
+
+    .input input {
+        margin-top: 2px;
+        font-size: 22px;
+
+    }
+
+
+    .form-block__btn {
+        margin-top: 32px;
+        width: 100%;
+    }
+
+
+    .form-btn {
+        font-size: 22px;
+        height: 60px;
     }
 
 }
