@@ -44,6 +44,18 @@ module.exports = (env, argv) => {
             }),
             new MiniCssExtractPlugin({
                 filename: filename('css')
+            }),
+            new CopyPlugin({
+                patterns: [
+                    {
+                        from: path.resolve(__dirname, 'src', 'fonts'),
+                        to: path.resolve(__dirname, 'dist', 'fonts')
+                    },
+                    {
+                        from: path.resolve(__dirname, 'src', 'img'),
+                        to: path.resolve(__dirname, 'dist', 'img')
+                    },
+                ],
             })
         ],
         module: {

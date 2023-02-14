@@ -8,5 +8,65 @@
 </head>
 <body>
     
+    
+    <main class="wrap">
+        <section class="app">
+            <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
+            <form class="main-form">
+                <div class="form-row form-row__1">
+                    <div class="range form-block">
+                        <span class="range-title">Стоимость автомобиля</span>
+                        <div class="range-row">
+                            <input type="text" name="num1" value="3 300 000">
+                            <span>₽</span>
+                            <input type="range" min="100000" max="4000000" value="3300000" step="100000" name="range1">
+                            <div class="range-line"><div></div></div>
+                        </div>
+                    </div>
+                    <div class="range form-block range-proc">
+                        <span class="range-title">Первоначальный взнос</span>
+                        <div class="range-row">
+                            <input type="text" name="num2" value="420 000 ₽">
+                            <span>13%</span>
+                            <input type="range" min="50000" max="1500000" value="420000" step="50000" name="range2">
+                            <div class="range-line"><div></div></div>
+                        </div>
+                    </div>
+                    <div class="range form-block">
+                        <span class="range-title">Срок лизинга</span>
+                        <div class="range-row">
+                            <input type="text" name="num3" value="60">
+                            <span>мес.</span>
+                            <input type="range" min="1" max="70" value="60" step="1" name="range3">
+                            <div class="range-line"><div></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row form-row__2">
+                    <div class="input form-block">
+                        <span class="range-title">Сумма договора лизинга</span>
+                        <input type="text" name="res1" value="">
+                    </div>
+                    <div class="input form-block">
+                        <span class="range-title">Ежемесячный платеж от</span>
+                        <input type="text" name="res2" value="">
+                    </div>
+                    <div class="form-block">
+                        <button class="form-btn not-active">
+                            <span>Оставить заявку</span>
+                            <img src="./img/Ellipse 112.svg">
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+
+
+
+
 </body>
 </html>

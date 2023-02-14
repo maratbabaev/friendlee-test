@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+img,
+header,
+footer,
+section {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+button {
+    border: 0;
+    background: none;
+}
+
+
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    color: #000;
+}
+
+.wrap {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1346px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+h1 {
+    font-family: 'Nekst', sans-serif;
+    font-size: 54px;
+    line-height: 90%;
+    max-width: 753px;
+    width: 100%;
+    font-weight: 900;
+    color: #111111;
+}
+
+.app {
+    width: 100%;
+}
+
+
+.main-form {
+    margin-top: 32px;
+    &.not-active {
+        pointer-events: none;
+    }
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-block {
+    width: 427px;
+}
+
+
+
+.range-title {
+    color: #575757;
+    font-size: 16px;
+    line-height: 125%;
+}
+
+
+.range-row {
+    color: #575757;
+    position: relative;
+    margin-top: 24px;
+    background: #F3F3F4;
+    border-radius: 16px;
+    font-size: 30px;
+    line-height: 1;
+    padding: 0 24px;
+    height: 68px;
+    font-family: 'Nekst', sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #F3F3F4;
+
+    &.active {
+        background: #Fff;
+    }
+
+    &.disabled {
+        background: #F3F3F4;
+        opacity: 0.6;
+    }
+
+    input[type="range"] {
+        position: absolute;
+        width: 90%;
+        bottom: 0;
+        left: 5%;
+        z-index: 1;
+    }
+
+    input[type="text"] {
+        color: #575757;
+        font-size: 30px;
+        line-height: 1;
+        border: 0;
+        background: none;
+        width: 80%;
+        height: 100%;
+        font-family: 'Nekst', sans-serif;
+        font-weight: 900;
+    }
+
+    span {
+        &:nth-child(2) {
+            transform: translateY(-3px);
+        }
+    }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+
+
+.range-line {
+    height: 1px;
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    left: 5%;
+    background: #E1E1E1;
+
+    div {
+        width: 0%;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #FF9514;
+    }
+}
+
+
+
+
+
+.range-proc {
+    .range-row {
+        padding-right: 7px;
+    }
+
+    .range-row span:nth-child(2) {
+        font-size: 20px;
+        transform: translateY(0);
+        padding: 15px 17px;
+        background: #EBEBEC;
+        border-radius: 16px;
+    }
+}
+
+
+
+
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+
+/***** Стили дорожки *****/
+/***** Chrome, Safari, Opera и Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #FF9514;
+    height: 0px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background: #FF9514;
+    height: 0px;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Сбрасываем вид по умолчанию */
+    appearance: none;
+    margin-top: -10px;
+    /* Центрируем ползунок на дорожке */
+    background-color: #FF9514;
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background-color: #FF9514;
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+}
+
+
+
+
+
+.form-row__2 {
+    margin-top: 51px;
+}
+
+
+
+.input {
+    input {
+        pointer-events: none;
+        margin-top: 8px;
+        border: 0;
+        background: none;
+        font-size: 54px;
+        line-height: 1;
+        color: #333333;
+        font-weight: 900;
+        font-family: "Nekst", sans-serif;
+    }
+}
+
+
+.form-btn {
+    background: #FF9514;
+    pointer-events: auto;
+    width: 100%;
+    height: 68px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 900;
+    font-family: "Nekst", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    transition: 0.3s;
+    position: relative;
+
+    span {
+        transition: 0.3s;
+    }
+
+    img {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        background: #111111;
+    }
+
+
+
+    &.not-active {
+        background: #FF951466;
+        pointer-events: none;
+    }
+
+    &:focus {
+
+        img {
+            animation-timing-function: linear;
+            opacity: 1;
+            animation-name: btnFocus;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        span {
+            opacity: 0;
+        }
+    }
+
+    &.pressed {
+        background: #575757;
+        pointer-events: none;
+        span {
+            opacity: 1;
+        }
+
+        img {
+            opacity: 0;
+        }
+    }
+}
+
+
+@keyframes btnFocus {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1439px) {
+
+    .wrap {
+        width: calc(100% - 96px);
+    }
+
+
+    .form-block {
+        width: calc(33.3333333% - 21px);
+    }
+
+}
