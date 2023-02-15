@@ -68,8 +68,7 @@ h1 {
 
 .main-form {
     margin-top: 32px;
-
-    &.not-active {
+    &.not-active{
         pointer-events: none;
     }
 }
@@ -127,7 +126,7 @@ h1 {
         z-index: 1;
     }
 
-    input[type="text"] {
+    .range-text {
         color: #575757;
         font-size: 30px;
         line-height: 1;
@@ -184,17 +183,21 @@ input::-webkit-inner-spin-button {
     .range-row {
         padding-right: 7px;
     }
-
-    .range-row span:nth-child(2) {
-        font-size: 20px;
-        transform: translateY(0);
-        padding: 15px 17px;
-        background: #EBEBEC;
-        border-radius: 16px;
-    }
 }
 
-
+.range-procent {
+    width: 69px;
+    height: 54px;
+    background: #EBEBEC;
+    border-radius: 16px;
+    border: 0;
+    color: #575757;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    font-family: "Nekst", sans-serif;
+    font-weight: 900;
+}
 
 
 
@@ -307,7 +310,7 @@ input[type="range"]::-moz-range-thumb {
         pointer-events: none;
     }
 
-    &:focus {
+    &.active {
 
         img {
             animation-timing-function: linear;
@@ -493,7 +496,7 @@ input[type="range"]::-moz-range-thumb {
         height: 60px;
     }
 
-    .range-row input[type=text] {
+    .range-row .range-text {
 
         font-size: 22px;
 
@@ -547,6 +550,10 @@ input[type="range"]::-moz-range-thumb {
     .form-btn {
         font-size: 22px;
         height: 60px;
+    }
+
+    .range-procent {
+        font-size: 22px;
     }
 
 }
